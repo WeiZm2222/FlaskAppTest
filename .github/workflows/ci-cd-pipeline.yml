@@ -49,6 +49,6 @@ jobs:
         working-directory: ./terraform
 
       - name: 'Terraform Apply'
-        run: terraform apply -var='environment=[{"name":"NEW_FEATURE","value":"${{ secrets.NEW_FEATURE }}"}]' -auto-approve
+        run: terraform apply -var='environment=[{"name":"NEW_FEATURE","value":"${{ vars.NEW_FEATURE }}"}]' -auto-approve
          # Be cautious with auto-approve in production environments
         working-directory: ./terraform
